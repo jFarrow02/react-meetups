@@ -1,7 +1,8 @@
 interface IMeetup {
-    id?: string;
+    id: string;
     title: string;
     description: string;
+    imgUrl: string;
     date: string;
     time: string;
     city: string;

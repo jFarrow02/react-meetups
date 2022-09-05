@@ -5,7 +5,11 @@ const SideNav = () => {
 
     return (
         <nav className={classes.SideNav}>
-            Navigation
+            <div style={{position: 'relative'}}>
+                <div style={{position: 'fixed', top: '50%'}}>
+                    Navigation
+                </div>
+            </div>
         </nav>
     )
 };

@@ -12,14 +12,12 @@ const Layout = () => {
             <div className={classes.header}>
                 <Header/>
             </div>
-            { !isMobileView && (
-                <div className={classes.sideNav}>
-                    <SideNav/>
+            
+            <div className={classes.appContent}>
+                { !isMobileView && <div className={classes.sideNavContainer}><SideNav/></div>}
+                <div className={ isMobileView ? classes.appContentContainerMobile : classes.appContentContainer }>
+                    <AppContent/>
                 </div>
-                )
-            }
-            <div className={isMobileView ? classes.appContentMobile : classes.appContent}>
-                <AppContent/>
             </div>
         </div>
     )

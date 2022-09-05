@@ -1,0 +1,14 @@
+.MeetupCard {
+    background-color: #FFF;
+    max-width: 500px;
+    height: 500px;
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, .5);
+    color: rgb(0, 0, 0);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.meetupImg {
+    height: 300px;
+    width: 100%;
+}
