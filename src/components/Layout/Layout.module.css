@@ -1,0 +1,15 @@
+.Layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px auto calc(100vh - 50px);
+}
+
+.header {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+}
+
+.sideNav {
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 1;
+}
