@@ -30,5 +30,6 @@ Hamburger.defaultProps = {
     width: '30px',
     color: '#FFF',
     onClick: () => {},
-}
+};
+
 export default Hamburger;
