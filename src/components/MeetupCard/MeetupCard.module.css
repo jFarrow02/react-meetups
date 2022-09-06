@@ -1,14 +1,38 @@
-.MeetupCard {
+.MeetupCardMobile, .MeetupCard {
     background-color: #FFF;
-    max-width: 500px;
-    height: 500px;
     box-shadow: 4px 6px 8px rgba(0, 0, 0, .5);
     color: rgb(0, 0, 0);
-    padding: 25px;
-    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
 }
 
-.meetupImg {
-    height: 300px;
-    width: 100%;
+.MeetupCardMobile {
+    height: 400px;
+    margin-bottom: 15px;
 }
+
+.MeetupCard {
+    height: 500px;
+    margin-bottom: 25px;
+    
+}
+
+.meetupInfoMobile, .meetupInfo {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    background-color: #FFF;
+}
+
+.meetupInfoMobile {
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.meetupInfo {
+    top: 0;
+    height: 100%;
+    width: 200px;
+}
+

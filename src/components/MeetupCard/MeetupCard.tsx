@@ -1,3 +1,4 @@
+import { useIsMobileView } from '../../hooks';
 import { IMeetup } from '../../interfaces';
 import classes from './MeetupCard.module.css';
 
@@ -6,6 +7,8 @@ interface IMeetupCardProps {
 }
 
 const MeetupCard = (props:IMeetupCardProps) => {
+    const isMobileView = useIsMobileView();
+
     const { 
         meetup: {
             description,
@@ -21,10 +24,13 @@ const MeetupCard = (props:IMeetupCardProps) => {
     } = props;
 
     return (
-        <div className={classes.MeetupCard}>
-            <p className={classes.meetupHeader}>{title}</p>
-            <img src={imgUrl} alt={title} className={classes.meetupImg} />
-            <p>{description}</p>
+        <div className={isMobileView ? classes.MeetupCardMobile : classes.MeetupCard} style={{ backgroundImage: `url("${imgUrl}")`}}>
+            <div className={isMobileView ? classes.meetupInfoMobile : classes.meetupInfo}>
+                <p className={classes.meetupHeader}>{title}</p>
+                <p>{description}</p>
+            </div>
+            {/* <img src={imgUrl} alt={title} className={classes.meetupImg} /> */}
+           
         </div>
     )
 };

@@ -22,11 +22,11 @@ const AllMeetupsView = () => {
 
     return (
         <div className='meetups-container'>
-            <section className={classes.AllMeetupsView}
-                // className={
-                //     isMobileView ? `${classes.AllMeetupsView} ${classes.flexColumn}` 
-                //     : `${classes.AllMeetupsView} ${classes.flexRow}`
-                // }
+            <section 
+                // className={classes.AllMeetupsView}
+                className={
+                    isMobileView ? classes.AllMeetupsViewMobile : classes.AllMeetupsView
+                }
             >
                 { [
                     FAKE_MEETUP,
