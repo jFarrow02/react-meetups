@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faListAlt, faEdit, faTrashCan, faSave, faPlusSquare } from '@fortawesome/free-regular-svg-icons'
 import { useIsMobileView } from '../../../hooks';
 import { IMeetup } from '../../../interfaces';
-import { MeetupCard } from '../../index';
+import { Button, MeetupCard } from '../../index';
 import Pelci from '../../../images/pelci-panoramio.jpg';
 import classes from './AllMeetupsView.module.css';
 
@@ -21,10 +23,13 @@ const AllMeetupsView = () => {
 
     const isMobileView = useIsMobileView();
 
+    const handleClick = () => {
+        console.log('clicked');
+    };
+
     return (
-        <div className='meetups-container'>
+        <div className={classes.meetupsContainer}>
             <section 
-                // className={classes.AllMeetupsView}
                 className={
                     isMobileView ? classes.AllMeetupsViewMobile : classes.AllMeetupsView
                 }

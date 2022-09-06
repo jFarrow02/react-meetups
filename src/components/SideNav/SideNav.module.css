@@ -2,5 +2,20 @@
     width: 100%;
     height: 100%;
     background-color: teal;
+}
+
+.navButtonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid deeppink;
+    height: 50%;
+}
+
+.navButton {
     color: #FFF;
+    border: 3px solid #FFF;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
 }

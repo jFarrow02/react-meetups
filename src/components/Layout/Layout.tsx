@@ -14,7 +14,6 @@ const Layout = () => {
             </div>
             
             <div className={classes.appContent}>
-                { !isMobileView && <div className={classes.sideNavContainer}><SideNav/></div>}
                 <div className={ isMobileView ? classes.appContentContainerMobile : classes.appContentContainer }>
                     <AppContent/>
                 </div>
