@@ -3,7 +3,7 @@
     box-shadow: 4px 6px 8px rgba(0, 0, 0, .5);
     color: rgb(0, 0, 0);
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .MeetupCardMobile {
@@ -20,19 +20,55 @@
 .meetupInfoMobile, .meetupInfo {
     position: absolute;
     left: 0;
-    z-index: 3;
+    z-index: 4;
     background-color: #FFF;
+    padding-top: 10px;
+    padding-left: 15px;
 }
 
 .meetupInfoMobile {
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 120px;
 }
 
 .meetupInfo {
     top: 0;
     height: 100%;
     width: 200px;
+}
+
+.meetupHeader {
+    font-size: 1.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.meetupDetailsMobile {
+    /* border: 1px solid deeppink; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    /* grid-column-gap: 15px; */
+}
+
+.meetupDetailsMobile > div > p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.meetupDetailsMobile > div:first-of-type {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 1;
+}
+
+.meetupDetailsMobile > div:last-of-type {
+    grid-column: 6 / -1;
+    grid-row: 1 / span 1;
+    padding-left: 25px;
+}
+
+.meetupDetails {
+    /* border: 1px solid deeppink; */
 }
 

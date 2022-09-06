@@ -20,17 +20,23 @@ const MeetupCard = (props:IMeetupCardProps) => {
             country,
             id,
             imgUrl,
+            streetAddress,
         }
     } = props;
 
     return (
         <div className={isMobileView ? classes.MeetupCardMobile : classes.MeetupCard} style={{ backgroundImage: `url("${imgUrl}")`}}>
             <div className={isMobileView ? classes.meetupInfoMobile : classes.meetupInfo}>
-                <p className={classes.meetupHeader}>{title}</p>
-                <p>{description}</p>
+                <div className={isMobileView ? classes.meetupDetailsMobile : classes.meetupDetails}>
+                    <div><p className={classes.meetupHeader}>{title}</p></div>
+                    <div>
+                        <p>{date} {time}</p>
+                        <p>{streetAddress}</p>
+                        <p>{city}, {stateProvince}</p>
+                        <p>{country}</p>  
+                    </div>
+                </div>
             </div>
-            {/* <img src={imgUrl} alt={title} className={classes.meetupImg} /> */}
-           
         </div>
     )
 };

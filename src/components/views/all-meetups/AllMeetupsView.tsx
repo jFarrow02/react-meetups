@@ -6,7 +6,7 @@ import classes from './AllMeetupsView.module.css';
 
 const FAKE_MEETUP: IMeetup = {
     id: '-1',
-    description: 'A Fake Meetup',
+    description: 'Lorem ipsum dolor sit amet, aperiam aliquam in nec, dicat eleifend ea his. Nam at alii liber everti, illum similique philosophia vis an. Populo essent nusquam in vix, ut ornatus qualisque deterruisset per, et vel melius evertitur abhorreant. Ut ubique oblique recusabo ius. Qui nonumy bonorum consequat et. Vix ad dolorem consequat, sea eu mediocrem eloquentiam, vel ad numquam fastidii.',
     title: 'Fake Meetup',
     stateProvince: 'CA',
     city: 'Pomona',
@@ -14,6 +14,7 @@ const FAKE_MEETUP: IMeetup = {
     time: '12:00 EST',
     imgUrl: Pelci,
     country: 'United States',
+    streetAddress: '1234 Main Street',
 }
 
 const AllMeetupsView = () => {
