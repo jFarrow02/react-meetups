@@ -1,11 +1,13 @@
 import {
     BrowserRouter,
     Routes,
-    Route
+    Route,
+    useNavigate,
   } from 'react-router-dom';
 import CONFIG from '../../utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import {
     AddMeetupView,
     AllMeetupsView,
@@ -24,6 +26,8 @@ const {
 } = CONFIG;
 
 const AppContent = () => {
+
+    // const navigate = useNavigate();
 
     const handleClick = () => {
     };
@@ -44,20 +48,6 @@ const AppContent = () => {
                     <Route path={newMeetup.path} element={<AddMeetupView/>} />
                 </Routes>
             </BrowserRouter>
-            <div className={classes.buttonContainer}>
-                <Button
-                    buttonClasses={[classes.newMeetupButton]}
-                    onClickHandler={handleClick}
-                    style={
-                        {
-                            border: '3px solid #FFF',
-                            backgroundColor: 'deeppink'
-                        }
-                    }
-                >
-                    <FontAwesomeIcon icon={faPlusSquare} size='3x'/>
-                </Button>
-            </div>
         </section>
     )
 };

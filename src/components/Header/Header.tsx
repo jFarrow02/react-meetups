@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { useIsMobileView } from '../../hooks';
 import { Hamburger } from '../index';
 import classes from './Header.module.css';
