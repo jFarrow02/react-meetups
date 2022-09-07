@@ -1,6 +1,5 @@
-import React from 'react';
 import { useIsMobileView } from '../../hooks';
-import { AppContent, Header, SideNav } from '../index';
+import { AppContent, Header } from '../index';
 import classes from './Layout.module.css';
 
 const Layout = () => {

@@ -17,7 +17,6 @@ interface IMeetupCardProps {
 
 const {
     ROUTES: {
-        deleteMeetup,
         editMeetup,
         viewMeetup,
     }
@@ -34,7 +33,6 @@ const MeetupCard = (props:IMeetupCardProps) => {
 
     const { 
         meetup: {
-            description,
             title,
             date,
             time,
