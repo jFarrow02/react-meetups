@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import CONFIG from './utils';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+const {
+  ROUTES: {
+    deleteMeetup,
+    editMeetup,
+    newMeetup,
+    fetchMeetup,
+  }
+} = CONFIG;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,22 +1,32 @@
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faListAlt,
     faEdit,
     faTrashCan,
-    faSave,
-    faPlusSquare
 } from '@fortawesome/free-regular-svg-icons';
 import { useIsMobileView } from '../../hooks';
 import { IMeetup } from '../../interfaces';
+import CONFIG from '../../utils';
 import classes from './MeetupCard.module.css';
 
 interface IMeetupCardProps {
     meetup: IMeetup;
 }
 
+const {
+    ROUTES: {
+        deleteMeetup,
+        editMeetup,
+        viewMeetup,
+    }
+} = CONFIG;
+
 const MeetupCard = (props:IMeetupCardProps) => {
     const isMobileView = useIsMobileView();
+
+    const navigate = useNavigate();
 
     const handleClick = () => {
         console.log('clicked');
@@ -42,7 +52,7 @@ const MeetupCard = (props:IMeetupCardProps) => {
             <div>
                 <Button
                     buttonClasses={[classes.meetupButton]}
-                    onClickHandler={handleClick}
+                    onClickHandler={() => {navigate(viewMeetup(id))}}
                 >
                     <FontAwesomeIcon icon={faListAlt} size='2x'/>
                 </Button>
@@ -50,7 +60,7 @@ const MeetupCard = (props:IMeetupCardProps) => {
             <div>
                 <Button
                     buttonClasses={[classes.meetupButton]}
-                    onClickHandler={handleClick}
+                    onClickHandler={() => {navigate(editMeetup(id))}}
                 >
                     <FontAwesomeIcon icon={faEdit} size='2x'/>
                 </Button>

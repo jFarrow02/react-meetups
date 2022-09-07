@@ -1,4 +1,3 @@
-import React from 'react';
 import { Header, Layout } from './components'
 import classes from './App.module.css';
 
