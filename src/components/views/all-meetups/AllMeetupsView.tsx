@@ -2,10 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useIsMobileView } from '../../../hooks';
 import CONFIG from '../../../utils';
 import { IMeetup } from '../../../interfaces';
-import { Button, MeetupCard, NavButtonContainer } from '../../index';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { MeetupCard, NavButtonContainer } from '../../index';
 import Pelci from '../../../images/pelci-panoramio.jpg';
 import classes from './AllMeetupsView.module.css';
 
@@ -20,9 +17,7 @@ const FAKE_MEETUP: IMeetup = {
     imgUrl: Pelci,
     country: 'United States',
     streetAddress: '1234 Main Street',
-}
-
-const { ROUTES: { allMeetups, newMeetup } } = CONFIG;
+};
 
 const AllMeetupsView = () => {
 
@@ -43,7 +38,14 @@ const AllMeetupsView = () => {
                     FAKE_MEETUP
                 ].map((meetup: IMeetup) => <MeetupCard key={`meetup-${meetup.id}`} meetup={meetup}/>)}
             </section>
-            <NavButtonContainer containerStyles={{ position: 'fixed', bottom: '0', right: '0', zIndex: '6' }} />
+            <NavButtonContainer containerStyles={
+                { 
+                    position: 'fixed', 
+                    bottom: '15px',
+                    right: '15px',
+                    zIndex: '6',
+                }
+            }/>
         </div>
         
     )
