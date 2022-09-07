@@ -8,6 +8,7 @@ import Header from './Header/Header';
 import Layout from './Layout/Layout';
 import MeetupCard from './MeetupCard/MeetupCard';
 import MeetupDetailsView from './views/meetup-details/MeetupDetailsView';
+import NavButtonContainer from './NavButtonContainer/NavButtonContainer';
 import SideNav from './SideNav/SideNav';
 
 export {
@@ -21,5 +22,6 @@ export {
     Layout,
     MeetupCard,
     MeetupDetailsView,
+    NavButtonContainer,
     SideNav,
 };

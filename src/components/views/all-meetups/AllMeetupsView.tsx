@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useIsMobileView } from '../../../hooks';
 import CONFIG from '../../../utils';
 import { IMeetup } from '../../../interfaces';
-import { Button, MeetupCard } from '../../index';
+import { Button, MeetupCard, NavButtonContainer } from '../../index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
@@ -43,25 +43,7 @@ const AllMeetupsView = () => {
                     FAKE_MEETUP
                 ].map((meetup: IMeetup) => <MeetupCard key={`meetup-${meetup.id}`} meetup={meetup}/>)}
             </section>
-            <div className={classes.buttonContainer}>
-                 <Button
-                    onClickHandler={() => { navigate(allMeetups.path)}}
-                 >
-                    <FontAwesomeIcon icon={faHouse} size='1x'/>
-                </Button>
-                <Button
-                    buttonClasses={[classes.newMeetupButton]}
-                    onClickHandler={() => { navigate(newMeetup.path)}}
-                    style={
-                        {
-                            border: '3px solid #FFF',
-                            backgroundColor: 'deeppink'
-                        }
-                    }
-                >
-                    <FontAwesomeIcon icon={faPlusSquare} size='3x'/>
-                </Button>
-            </div>
+            <NavButtonContainer containerStyles={{ position: 'fixed', bottom: '0', right: '0', zIndex: '6' }} />
         </div>
         
     )
